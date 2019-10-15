@@ -1,0 +1,238 @@
+*{
+    margin:0;padding:0;list-style:none;
+}
+html,body,.wrapper{
+    width:100%;height:100%;
+}
+
+/* 顶部区域 */
+.wrapper .header{
+    background-color:#354457;
+    height:70px;
+}
+.header .logo{
+    width:180px;
+    height:70px;
+    line-height:70px;
+    padding-left:20px;
+    color:#b3bcc5;
+}
+.header .logo a{
+    display:inline-block;
+    width:30px;
+    height:30px;
+}
+.header .logo a img{
+    width:30px;
+    height:30px;
+    vertical-align:middle;
+}
+.header .logo h1{
+    display:inline-block;
+    font-size:14px;
+    font-weight:400;
+    margin-left:8px;
+}
+
+/* 左侧区域 */
+.wrapper .left-menu{
+    float:left;
+    width:200px;
+    height:calc(100% - 70px);
+    background-color:#4d5e70;;
+}
+.left-menu dt,
+.left-menu dd{
+    height:40px;
+    line-height:40px;
+    font-size:14px;
+    color:#b3bcc5;
+}
+.left-menu dt{
+    width:192px;
+    padding-left:8px;
+    font-weight:bolder;
+}
+.left-menu dd{
+    width:170px;
+    padding-left:30px;
+    cursor:pointer;
+}
+.left-menu dd:hover{
+    background-color:rgba(255, 255, 255, 0.5);
+    color:#354457;
+}
+.left-menu dd.active{
+    background-color:#ddd;
+    color:#354457;
+}
+
+/* 右侧区域 */
+.wrapper .right-content{
+    float:left;
+    width:calc(100% - 200px);
+    height:calc(100% - 70px);
+    background-color:#eee;
+    position:relative;
+}
+.wrapper .right-content .search{
+    height:60px;
+    line-height:60px;
+    padding-left:30px;
+}
+.wrapper .right-content .search label{
+    color:#424242;
+    font-weight:700;
+}
+.wrapper .right-content .search input{
+    border:1px solid rgb(171, 167, 167);
+    outline:none;
+    padding:6px 10px;
+}
+.wrapper .right-content .search .btn{
+    padding:5px 20px;
+    outline:none;
+    background:#999;
+    color:#fff;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+    margin-left:10px;
+}
+.wrapper .right-content .search .btn:hover{
+    background-color:rgb(144, 136, 136);
+    box-shadow:0 0 4px #999;
+    transition:all 0.3s;
+}
+
+
+
+.right-content .student-list table{
+    width:100%;
+    text-align:center;
+}
+.student-list table tr{
+    height:30px;
+    line-height:30px;
+}
+.student-list table thead,
+.student-list table tbody{
+    font-size:14px;
+    line-height:30px;
+}
+.student-list table thead{
+    background-color:#e3e8ee;
+    color:#646987;
+}
+.student-list table tbody{
+    background-color:#fff;
+}
+.student-list table tbody .btn{
+    padding:3px 10px;
+    outline:none;
+    border:none;
+    margin:0 4px;
+    cursor:pointer;
+    color:#fff;
+}
+.student-list table tbody .edit{
+    background-color:#5cb85c;
+}
+.student-list table tbody .edit:hover{
+    background-color:#398439;
+}
+.student-list table tbody .del{
+    background-color:#d9534f;
+}
+.student-list table tbody .del:hover{
+    background-color:#c9302c;
+}
+
+/* 新增学生 */
+.wrapper .right-content .add-student{
+    width:400px;
+    padding:40px 0;
+    border-radius:10px;
+    box-shadow:0 0 15px #999;
+    position:absolute;
+    left:50%;top:50%;
+    margin-left:-200px;
+    transform:translateY(-50%);
+}
+.right-content label,.right-content input{
+    font-size:16px;
+    color:#999;
+}
+.right-content input{
+    border:1px solid rgb(194, 189, 189);
+    padding:4px 8px;
+    font-size:14px;
+    border-radius:3px;
+}
+.right-content form div{
+    margin:10px 0;
+}
+.right-content form label{
+    display:inline-block;
+    width:100px;
+    margin-right:10px;
+    text-align:right;
+}
+.right-content form label.radio-label{
+    width:20px;
+}
+.right-content form .btn{
+    width:90px;
+    height:30px;
+    margin-right:7px;
+    color:#424242;
+    outline:none;
+    cursor:pointer;
+}
+.right-content form .btn:hover{
+    background-color:rgb(208, 200, 200);
+    box-shadow:0px 0px 3px #999;
+    transition:all 0.3s;
+}
+/* .right-content .content{
+    display:none;
+}
+.right-content .content-active{
+    display:block;
+} */
+
+/* 遮罩层 */
+.student-list .dialog,
+.mask{
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+}
+.mask{
+    background-color:rgba(0,0,0,.5);
+}
+/* .dialog{
+    display:none;
+} */
+.dialog.show{
+    display:block;
+}
+.dialog-content{
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    padding:10px;
+    width:480px;
+    height:430px;
+    border-radius:5px;
+    background-color:#fff;
+}
+.dialog-content form{
+    width:400px;
+    margin:30px auto;
+}
